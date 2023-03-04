@@ -39,20 +39,11 @@ let users = [
  * Note: Ubah function menggunakan arrow function.
  */
 const all = () => {
-  // cara 1
-  // for(var i = 0; i < users.length; i++) {
-  //     for(const data in users[i]) {
-  //         console.log(`${data} : ${users[i][data]}`);
-  //     }
-  //     console.log("--------------------------------");
-  // }
-
-  // cara 2
-  for (const data of users) {
-    for (const person in data) {
-      console.log(`${person} : ${data[person]}`);
-    }
-    console.log("--------------------------------");
+  for(var i = 0; i < users.length; i++) {
+      for(const data in users[i]) {
+          console.log(`${data} : ${users[i][data]}`);
+      }
+      console.log("--------------------------------");
   }
 };
 
