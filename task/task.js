@@ -4,7 +4,33 @@
  * Object memiliki property: name, age, major.
  * Note: Ubah var menggunakan JavaScript Modern.
  */
-var users;
+let users = [
+  {
+    name: "Ahmad Ihsanullah Rabbani",
+    age: 20,
+    major: "Software Engineer",
+  },
+  {
+    name: "Muhamad Andi Galih",
+    age: 20,
+    major: "Data Engineer",
+  },
+  {
+    name: "Rizwan Nur Saputra",
+    age: 20,
+    major: "Network Engineer",
+  },
+  {
+    name: "Sulthan Salman",
+    age: 21,
+    major: "Cyber Security",
+  },
+  {
+    name: "Ahmad Fauzi Ariyanto",
+    age: 20,
+    major: "Software Engineer",
+  },
+];
 
 /**
  * TODO 2
@@ -12,7 +38,23 @@ var users;
  * Hint: Gunakan for/for-of.
  * Note: Ubah function menggunakan arrow function.
  */
-function all() {}
+const all = () => {
+  // cara 1
+  // for(var i = 0; i < users.length; i++) {
+  //     for(const data in users[i]) {
+  //         console.log(`${data} : ${users[i][data]}`);
+  //     }
+  //     console.log("--------------------------------");
+  // }
+
+  // cara 2
+  for (const data of users) {
+    for (const person in data) {
+      console.log(`${person} : ${data[person]}`);
+    }
+    console.log("--------------------------------");
+  }
+};
 
 /**
  * TODO 3
@@ -20,7 +62,7 @@ function all() {}
  * Hint: Gunakan method push.
  * Note: Ubah function menggunakan arrow function.
  */
-function store(user) {}
+const store = (user) => users.push(user);
 
 /**
  * TODO 4.
@@ -28,7 +70,7 @@ function store(user) {}
  * Hint: re-assign array.
  * Note: Ubah function menggunakan arrow function.
  */
-function update(index, user) {}
+const update = (index, user) => users[index] = user;
 
 /**
  * TODO 5.
@@ -36,7 +78,7 @@ function update(index, user) {}
  * Hint: Gunakan method splice.
  * Note: Ubah function menggunakan arrow function.
  */
-function destroy(index) {}
+const destroy = (index) => users.splice(index, 1);
 
 /**
  * Function main.
@@ -61,7 +103,7 @@ const main = () => {
     major: "Informatics",
   };
   store(newUser);
-
+  
   /**
    * Test function update
    */
@@ -83,7 +125,7 @@ const main = () => {
 };
 
 main();
-
+all();
 /**
  * Jangan hapus exports.
  * Exports ini untuk tujuan testing.
