@@ -39,11 +39,11 @@ let users = [
  * Note: Ubah function menggunakan arrow function.
  */
 const all = () => {
-  for(var i = 0; i < users.length; i++) {
-      for(const data in users[i]) {
-          console.log(`${data} : ${users[i][data]}`);
-      }
-      console.log("--------------------------------");
+  for (const data of users){
+    for(const person in data){
+      console.log(`${person} : ${data[person]}`);
+    }
+  console.log("--------------------------------");
   }
 };
 
@@ -53,7 +53,9 @@ const all = () => {
  * Hint: Gunakan method push.
  * Note: Ubah function menggunakan arrow function.
  */
-const store = (user) => users.push(user);
+const store = (user) => {
+  users.push(user)
+};
 
 /**
  * TODO 4.
@@ -61,7 +63,9 @@ const store = (user) => users.push(user);
  * Hint: re-assign array.
  * Note: Ubah function menggunakan arrow function.
  */
-const update = (index, user) => users[index] = user;
+const update = (index, user) => {
+  users[index] = user
+};
 
 /**
  * TODO 5.
@@ -69,7 +73,9 @@ const update = (index, user) => users[index] = user;
  * Hint: Gunakan method splice.
  * Note: Ubah function menggunakan arrow function.
  */
-const destroy = (index) => users.splice(index, 1);
+const destroy = (index) => {
+  users.splice(index, 1)
+};
 
 /**
  * Function main.
