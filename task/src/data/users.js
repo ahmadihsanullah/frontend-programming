@@ -31,4 +31,4 @@ const users = [
  * Export variable users.
  * Gunakan export default.
  */
-// CODE HERE
+export default users;
