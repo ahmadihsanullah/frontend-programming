@@ -1,0 +1,24 @@
+<body>
+    <div id="root"></div>
+
+    <!--  define React components. -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- React render HTML elements to the DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel for write react in HTMl with jsx -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // create component
+        function Hello() {
+            return <h1>Hello</h1>
+        }
+        // Ambil root React
+        const rootElement = document.getElementById("root");
+
+        // Buat root react
+        const root = document.createElement(rootElement);
+
+        root.render(<Hello />);
+    </script>
+</body>
